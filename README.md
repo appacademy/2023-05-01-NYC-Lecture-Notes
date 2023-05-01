@@ -13,7 +13,7 @@ Listed below are some useful resources, be sure to check them out. This list of 
 - [Additional Resources](https://github.com/appacademy/cohort-resources)
 
 ### Additional Resources:
-- [NY January 2023 Cohort Calendar](https://docs.google.com/spreadsheets/d/1zy4Snz7ruxs6ueE_A30EEhDdYUQ1CsIQDxBjjPmXxkk/edit?usp=sharing)
+- [NY May 2023 Cohort Calendar](https://docs.google.com/spreadsheets/d/1zy4Snz7ruxs6ueE_A30EEhDdYUQ1CsIQDxBjjPmXxkk/edit?usp=sharing)
 - [Ruby docs](https://ruby-doc.org/core-2.7.0/index.html#classes)
 - [RSpec docs](https://relishapp.com/rspec/)
 - [MDN Javascript docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
