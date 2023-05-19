@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Stack
   def initialize
     @secret_codes = []
@@ -5,6 +7,7 @@ class Stack
 
   def push(value)
     secret_codes << value
+    return self
   end
 
   def pop
@@ -23,9 +26,14 @@ class Stack
     secret_codes.empty?
   end
 
-  # def inspect
-  #   "#<Stack:#{self.object_id}>"
+  # def expose
+  #   @secret_cods
   # end
+
+  def inspect
+    # debugger
+    "#<Stack:#{self.object_id} hellloooooo>"
+  end
 
  private
  attr_reader :secret_codes

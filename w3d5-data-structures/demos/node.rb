@@ -1,5 +1,22 @@
 
+class Node
 
+    attr_reader :value, :children
+
+    def initialize(value, children = [])
+        @value = value
+        @children = children
+    end
+
+    # def children_values
+    #     @children.map { |child| child.value }
+    # end
+
+    # def inspect
+    #     "#<Node:#{self.object_id} @value=#{self.value} @children=#{children_values}"
+    # end
+
+end
 
     #     a
     #    / \

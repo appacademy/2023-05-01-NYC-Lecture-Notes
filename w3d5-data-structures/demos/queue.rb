@@ -6,6 +6,7 @@ class MyQueue
   def enqueue(el)
       inner_array.push(el)
       # inner_array.unshift(el)
+      return "success!"
   end
 
   def dequeue
@@ -14,7 +15,7 @@ class MyQueue
   end
 
   def show
-      inner_array
+      inner_array.dup
   end
 
   def empty?
