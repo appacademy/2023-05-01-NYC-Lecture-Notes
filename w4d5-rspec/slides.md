@@ -30,19 +30,19 @@
 
 # What is TDD?
 
-![tdd](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/master/ruby/w4d4-rspec/tdd.png?token=AQCB66KONEQTYSUH7JXSKA3BKNTPY)
+![tdd](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w4d5-rspec/images/tdd.png?raw=true)
 
 ---
 
 # Why do we test?
 
-![testing-failures](images/why_do_we_test.png)
+![testing-failures](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w4d5-rspec/images/why_do_we_test.png?raw=true)
 
 ---
 
 # What do we test?
 
-![testing-pyramid](images/testing_pyramid.png)
+![testing-pyramid](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w4d5-rspec/images/testing_pyramid.png?raw=true)
 
 ---
 
