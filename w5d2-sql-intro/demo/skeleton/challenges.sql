@@ -470,3 +470,170 @@ WHERE id IN (
             cost DESC
         LIMIT 1
 );
+
+
+
+
+-- CHALLENGE #17
+-- Show the name of all of the possessions and their owner
+
+SELECT
+    possessions.name AS possession_name, 
+    ny_instructors.name AS owner_name
+FROM
+    possessions
+JOIN ny_instructors
+    ON possessions.owner_id = ny_instructors.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- CHALLENGE #18
+-- Find the total number of possessions owned by each person
+
+SELECT
+    ny_instructors.name AS owner_name,
+    COUNT(*) AS total_possessions
+FROM
+    possessions
+JOIN ny_instructors
+    ON possessions.owner_id = ny_instructors.id
+GROUP BY
+    ny_instructors.name;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- CHALLENGE #19
+-- Which SF instructor does not have any possessions?
+
+SELECT
+    sf_instructors.name
+FROM 
+    sf_instructors
+LEFT JOIN possessions
+    ON sf_instructors.id = possessions.owner_id
+WHERE
+    possessions.id IS NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- CHALLENGE #20
+-- Get all the friendships between SF and NY instructors
+SELECT
+    *
+FROM
+    sf_instructors
+JOIN friendships
+    ON sf_instructors.id = friendships.sf_id
+JOIN ny_instructors
+    ON ny_instructors.id = friendships.ny_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- CHALLENGE #21
+-- Get all of the ny instructors who are also pod leaders
+-- visualize
+SELECT
+    name
+FROM 
+    ny_instructors
+WHERE
+    pod_leader_id IS NULL;
