@@ -4,7 +4,7 @@ class AddAgeAndPaToUsers < ActiveRecord::Migration[7.0]
     add_column :users, :political_affiliation, :string
 
     # remove_column :users, :phone_number, :string
-    remove_column :users, :post, :string
+    # remove_column :users, :post, :string
 
   end
 
