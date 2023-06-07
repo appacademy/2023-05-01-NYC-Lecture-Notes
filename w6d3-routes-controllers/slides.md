@@ -181,8 +181,6 @@ Note:
 * `GET /users/:id`
 * `GET /users/:username`
 
-Vote with a reaction: ✅ or ❌
-
 ---
 
 ## [Kahoot! - Quiz 1](https://play.kahoot.it/v2/?quizId=1f5013b7-6dad-49ff-a4be-14b6c2dacf5f)
