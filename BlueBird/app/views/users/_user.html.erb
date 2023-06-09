@@ -1,0 +1,15 @@
+<ul>
+    
+    <% if action == :index  %>
+        <li> <a href="<%= user_url(user.id) %>"> User's show page </a> </li>
+        
+    <% else %>
+        <li> <a href="<%= users_url%>"> Users index page </a> </li>
+    <% end %>
+    
+    <li> <%= user.username %> </li>
+    <li> <%= user.email %> </li>
+    <li> <%= user.age %> </li>
+
+</ul>
+

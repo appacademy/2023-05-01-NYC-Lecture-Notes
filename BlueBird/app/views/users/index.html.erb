@@ -1,0 +1,10 @@
+<h1> These are all of our users </h1>
+
+<ul>
+    <% @users.each do |loop_user| %>
+        <li>
+            <%= render 'user', user: loop_user, action: :index %>
+        </li>
+    <% end %>
+
+</ul>
