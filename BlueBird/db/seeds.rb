@@ -22,7 +22,7 @@ ApplicationRecord.connection.reset_pk_sequence!('likes')
 amin = User.create!(
   username: "awesome_person", 
   email: "awesome_person@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 29, 
   political_affiliation: "JavaScript"
 )
@@ -30,15 +30,15 @@ amin = User.create!(
 peter = User.create!(
   username: "valerous", 
   email: "valerous@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 21, 
   political_affiliation: "Ruby"
 )
 
 steve = User.create!(
-  username: "dan_the_man", 
-  email: "dan_the_man@email.com", 
-  # password: "starwars",
+  username: "stevie_wonder", 
+  email: "stevie_wonder@email.com", 
+  password: "starwars",
   age: 13, 
   political_affiliation: "Ruby"
 )
@@ -46,7 +46,7 @@ steve = User.create!(
 clarence = User.create!(
   username: "the_wizard", 
   email: "the_wizard@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 28, 
   political_affiliation: "CSS"
 )
@@ -54,7 +54,7 @@ clarence = User.create!(
 kyle = User.create!(
   username: "catz", 
   email: "catz@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 14, 
   political_affiliation: "Ruby"
 )
@@ -62,7 +62,7 @@ kyle = User.create!(
 ayce = User.create!(
   username: "squirelly", 
   email: "squirelly@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 18, 
   political_affiliation: "JavaScript"
 )
@@ -70,7 +70,7 @@ ayce = User.create!(
 kin = User.create!(
   username: "talk_to_the_hand", 
   email: "talk_to_the_hand@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 14, 
   political_affiliation: "Ruby"
 )
@@ -78,7 +78,7 @@ kin = User.create!(
 spencer = User.create!(
   username: "spencer_gets_buckets", 
   email: "spencer_gets_buckets@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 12, 
   political_affiliation: "JavaScript"
 )
@@ -86,7 +86,7 @@ spencer = User.create!(
 brad = User.create!(
   username: "beep_boop", 
   email: "beep_boop@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 26, 
   political_affiliation: "C++"
 )
@@ -94,7 +94,7 @@ brad = User.create!(
 greta = User.create!(
   username: "adventursaurus", 
   email: "adventursaurus@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 29, 
   political_affiliation: "JavaScript"
 )
@@ -102,7 +102,7 @@ greta = User.create!(
 big_company = User.create!(
   username: "instructors_rock", 
   email: "instructors_rock@email.com", 
-  # password: "starwars",
+  password: "starwars",
   age: 39, 
   political_affiliation: "Instructors"
 )

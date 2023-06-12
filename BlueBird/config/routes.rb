@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   resources :chirps, except: [:new, :edit]
   # resources :chirps, only: [:index, :show, :create, :update, :destroy]
-  resources :users
+  resources :users, only: [:index, :show, :edit, :update, :new, :create]
 
 end
