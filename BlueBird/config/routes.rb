@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   # get '/chirps/:id/edit', to: 'chirps#edit'
 
   resources :chirps, except: [:new, :edit]
-  # resources :chirps, only: [:index, :show, :create, :update, :destroy]
+
   resources :users, only: [:index, :show, :edit, :update, :new, :create]
+
+  resource :session, only: [:new, :create, :destroy]
 
 end

@@ -1,5 +1,8 @@
 
 class UsersController < ApplicationController
+    before_action :require_logged_in, only: [:index, :show, :edit, :update]
+    before_action :require_logged_out, only: [:new, :create]
+
     def index
         @users = User.all.order(:id)
         # render json: users
@@ -16,12 +19,12 @@ class UsersController < ApplicationController
         render :new
     end
 
-
     def create
         @user = User.new(user_params)
         
         if @user.save
             redirect_to user_url(@user)
+            login(@user)
         else
             render json: @user.errors.full_messages, status: 422
         end
@@ -48,6 +51,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :age, :email)
+        params.require(:user).permit(:username, :age, :email, :password)
     end
 end
