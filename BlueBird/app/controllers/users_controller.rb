@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     end
 
     def new
+        @user = User.new
         render :new
     end
 
@@ -26,7 +27,9 @@ class UsersController < ApplicationController
             redirect_to user_url(@user)
             login(@user)
         else
-            render json: @user.errors.full_messages, status: 422
+            # render json: @user.errors.full_messages, status: 422
+            flash.now[:errors] = @user.errors.full_messages
+            render :new
         end
     end
 

@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -18,12 +18,25 @@
 
     <form action="<%= session_url %>" method='post'>
       <input type="hidden" name="_method" value='delete'>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <input type="submit" value='Logout'>
     </form>
   <% else %>
     <a href="<%= new_user_url%>">Sign Up</a>
     <a href="<%= new_session_url %>">Log In</a>
   <% end %>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <%= error %>
+      <% end %>
+    <% end %>
+
+      <% if flash[:messages] %>
+      <% flash[:messages].each do |message| %>
+        <%= message %>
+      <% end %>
+    <% end %>
 
     <%= yield %>
   </body>
