@@ -96,6 +96,7 @@
     gem 'rspec-rails'
     gem 'rails-controller-testing'
     gem 'factory_bot_rails' # easily create test objects
+    gem 'faker' # generate random data for testing
   end
 
   group :test do
@@ -104,7 +105,6 @@
     gem 'webdrivers'
 
     gem 'shoulda-matchers' # simple syntax for model tests
-    gem 'faker' # generate random data for testing
     gem 'launchy' # enable save_and_open_page
   end
  ```
@@ -221,7 +221,7 @@ it { should belong_to(:user) }
 
 ```ruby
 get new_user_path
-post :create, params: { user: { username: "harry_potter" } }
+post users_path, params: { user: { username: "harry_potter" } }
 ```
 ---
 
