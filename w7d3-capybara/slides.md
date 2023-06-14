@@ -1,6 +1,6 @@
 # W7D4 - Capybara
 
-![capy_grass](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capy_grass.jpg?token=AL56YCXYBXUCBUU4WZY6XCS7VRRIU) 
+![capy_grass](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capy_grass.jpg?raw=true) 
 
 ---
 
@@ -16,18 +16,18 @@
 ---
 
 ## What is a Capybara?
-![capy_with_turtles](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capy_with_turtles.jpg?token=AL56YCWRRHA7UX5NPCQRL527VRPWK)
+![capy_with_turtles](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capy_with_turtles.jpg?raw=true)
 
 ---
 
 ## Ugly cousin of the Wombat
-![wombat](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/wombat.jpg?token=AL56YCSI7VJRR2INTTEELI27VRPX4)
+![wombat](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/wombat.jpg?raw=true)
 
 ---
 
 ## Testing Review
 
-![mommy_capy](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/mommy_capy.jpg?token=AL56YCXSL73CQGEO6QN7YHS7VRPZG)
+![mommy_capy](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/mommy_capy.jpg?raw=true)
 
 
 ---
@@ -39,7 +39,7 @@
 1. Easier collaboration
 1. Built-in documentation
 
-![lazy_capy](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/lazy_capy.jpg?token=AL56YCRKKEOC242RIT2JN3C7VRP2W)
+![lazy_capy](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/lazy_capy.jpg?raw=true)
 
 
 ---
@@ -53,7 +53,7 @@
  /      Unit Tests       \
 
 ```
-![image](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capy_pyramid.jpg?token=AL56YCRNETJAO2UP4IVKFO27VRSPI)
+![image](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capy_pyramid.jpg?raw=true)
 
 ---
 
@@ -74,7 +74,7 @@
 1. Green
 1. Refactor
 
-![crosswalk](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/crosswalk.jpg?token=AL56YCSWZK4WYSCUYO6D4QC7VRSVI)
+![crosswalk](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/crosswalk.jpg?raw=true)
 
 ---
 
@@ -83,7 +83,7 @@
 * What are the components we typically create in Rails?
   * Models, Controllers, and Views (features)
 
-![capy_with_monkeys](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capys_with_monkeys.jpg?token=AL56YCRWPBSTCBZDGHDZFV27VRP6S)
+![capy_with_monkeys](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capys_with_monkeys.jpg?raw=true)
 
 ---
 
@@ -180,7 +180,7 @@ it { should belong_to(:user) }
 
 ## Demo 2 - Model Testing
 
-![stuffed_capy](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/stuffed_capy.jpg?token=AL56YCWRDIJFE3JVZSNM3JS7VRQAK)
+![stuffed_capy](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/stuffed_capy.jpg?raw=true)
 
 ---
 
@@ -221,7 +221,7 @@ post :create, params: { user: { username: "harry_potter" } }
 ---
 
 ## Demo 3 - Controller Testing
-![capy_monkey](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capy_monkey.jpg?token=AL56YCUFJSQLQ3UMP3AFOAS7VRQBY)
+![capy_monkey](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capy_monkey.jpg?raw=true)
 
 ---
 
@@ -231,7 +231,7 @@ post :create, params: { user: { username: "harry_potter" } }
 * Test in a "headless" browser (no actual UI)
 * Capybara can open a real browser for debugging (`save_and_open_page`)
 
-![capy_alligator](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/capy_alligator.jpg?token=AL56YCS6IOOOCQ3YGWECLVK7VRQCY)
+![capy_alligator](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/capy_alligator.jpg?raw=true)
 
 ---
 
@@ -271,7 +271,7 @@ Capybara changes the names of some of RSpec's standard methods to reflect it's s
 
 ## Code Demo - Feature Testing (Capybara)
 
-![yuzu_bath](https://raw.githubusercontent.com/appacademy/worldwide-lecture-notes/capybara/rails/w7d3-capybara/assets/yuzu_bath.jpg?token=AL56YCRMNAJYV4JHE2C2VRK7VRQIC)
+![yuzu_bath](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w7d3-capybara/assets/yuzu_bath.jpg?raw=true)
 
 ---
 
