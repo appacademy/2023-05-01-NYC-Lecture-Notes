@@ -92,13 +92,18 @@
 * Add RSpec and other testing gems to Gemfile and run `bundle install`
  ```ruby
   # my_app/Gemfile
-
   group :development, :test do
     gem 'rspec-rails'
     gem 'rails-controller-testing'
-    gem 'capybara' # end-to-end feature testing
-    gem 'shoulda-matchers' # simple syntax for model tests
     gem 'factory_bot_rails' # easily create test objects
+  end
+
+  group :test do
+    gem 'capybara' # end-to-end feature testing
+    gem 'selenium-webdriver'
+    gem 'webdrivers'
+
+    gem 'shoulda-matchers' # simple syntax for model tests
     gem 'faker' # generate random data for testing
     gem 'launchy' # enable save_and_open_page
   end
@@ -215,7 +220,7 @@ it { should belong_to(:user) }
 (http request) :(controller action), (params)
 
 ```ruby
-get :new
+get new_user_path
 post :create, params: { user: { username: "harry_potter" } }
 ```
 ---
