@@ -21,9 +21,9 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        if logged_in?
+        # if logged_in?
             logout!
-        end
+        # end
         flash[:messages] = ["Successfully logged out"]
         redirect_to new_session_url
     end

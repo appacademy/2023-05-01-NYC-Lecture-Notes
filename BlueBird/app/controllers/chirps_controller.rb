@@ -1,20 +1,27 @@
 class ChirpsController < ApplicationController
-  
+  before_action :require_logged_in, only: [:new, :create]
+
   def index
-    chirps = Chirp.all
+    @chirps = Chirp.all.includes(:author).order(created_at: :DESC)
     
-    render json: chirps
+    # render json: chirps
+    render :index
   end
 
   def show
-    chirp = Chirp.find(params[:id])
-    render json: chirp
+    @chirp = Chirp.find(params[:id])
+    render :show
+  end
+
+  def new
+    render :new
   end
 
   def create
     # chirp = Chirp.new(params.require(:chirp).permit(:body, :author_id))
-    chirp = Chirp.new(chirp_params)
-    chirp.author_id = 1
+    # chirp = Chirp.new(chirp_params)
+    # chirp.author_id = current_user.id
+    chirp = current_user.chirps.new(chirp_params)
 
     if chirp.save!
       # debugger
@@ -24,6 +31,11 @@ class ChirpsController < ApplicationController
       flash[:errors] = @user.errors.full_messages
       render :new
     end
+  end
+
+  def edit
+    @chirp = Chirp.find(params[:id])
+    render :edit
   end
 
   def update

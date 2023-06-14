@@ -1,0 +1,18 @@
+<h3>Chirp's Index</h3>
+
+<ul>
+  <% @chirps.each do |chirp| %>
+    <li>
+      <p>Body: <%= chirp.body %></p>
+      <p>Author: <a href="<%= user_url(chirp.author) %>"><%= chirp.author.username %></a></p>
+      <% if current_user.id == chirp.author.id %>
+        <form action="<%= chirp_url(chirp) %>" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Remove Chirp">
+        </form>
+        <a href="<%= edit_chirp_url(chirp) %>">Edit this Chirp</a>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h1>Edit an existing chirp</h1>
+
+<form action="<%= chirp_url(@chirp) %>" method="POST" >
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="PATCH">
+
+    <label for="body">Body:</label>
+    <textarea id="body" name="chirp[body]"><%= @chirp.body %></textarea>
+    
+    <input type="submit" value="Edit Chirp">
+</form>
