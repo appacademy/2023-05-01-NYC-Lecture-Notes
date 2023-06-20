@@ -60,6 +60,8 @@ function howToConst() {
   console.log(username);
 }
 
+// howToConst();
+
 
 
 
@@ -83,11 +85,14 @@ function howToConst2() {
   const username = 'Harold';
 
   if (true) {
+    // const username = "John";
     console.log(username);
   }
 
   console.log(username);
 }
+
+// howToConst2();
 
 
 
@@ -109,7 +114,7 @@ function howToConst3() {
   console.log(username);
 }
 
-
+// howToConst3();
 
 
 
@@ -134,8 +139,11 @@ function howToLet() {
 
   console.log(secret);
 }
+// howToLet();
 
 
+
+// howToLet2();
 
 
 // What about here?
@@ -144,13 +152,13 @@ function howToLet2() {
 
   if (true) {
     secret = "I'm secretly a banana";
+    let secret = secret;
     console.log(secret);
-
-    let secret = "Nope, definitely a cat.";
   }
 
   console.log(secret);
 }
+
 
 
 
@@ -196,6 +204,7 @@ function howToVar() {
   console.log(username);
 }
 
+// howToVar();
 
 
 
@@ -212,7 +221,7 @@ function howToVar() {
 
 // What about here?
 function howToVar2() {
-
+  var age = 10;
   if (true) {
     var username = 'Url';
 
@@ -220,6 +229,16 @@ function howToVar2() {
   }
 
   console.log(username);
+  return {
+    sayHello: function() {
+      var username = "Toby";
+      console.log(username);
+      console.log(age);
+    },
+    sayBye: function() {
+      console.log(username);
+    }
+  };  
 }
 
-
+// howToVar2();

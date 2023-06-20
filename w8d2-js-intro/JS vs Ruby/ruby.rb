@@ -21,11 +21,11 @@ end
 # p variables
 
 # if statements
-# if true
-#     return "puppies"
-# elsif false
-#     return "cats"
-# end
+if true
+    return "puppies"
+elsif false
+    return "cats"
+end
 
 
 def comparison(input)
@@ -55,4 +55,13 @@ end
 
 # p truthy_falsey(false)
 
+someFunc(1, 2)
+def someFunc(x, y)
 
+    [1, 2, 3].each do |x|
+        puts y
+        puts x
+    end
+    puts x
+
+end

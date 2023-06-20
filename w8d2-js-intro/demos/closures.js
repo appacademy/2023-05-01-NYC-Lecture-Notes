@@ -9,7 +9,10 @@ const feed = function () {
   const foodItems = ['Grits'];
 
   // We are going to write a closure (function) right here
-
+  return function(food) {
+    foodItems.push(food);
+    console.log(foodItems.join(", "));
+  };
 };
 
 // How do we use this feed function???
@@ -21,6 +24,10 @@ const feed2 = function(foodItems) {
   // foodItems is a free variable (a parameter this time)
 
   // closure here
+  return (food) => {
+    foodItems.push(food);
+    console.log(foodItems.join(", "));
+  };
 };
 
 
@@ -48,10 +55,13 @@ const feed2 = function(foodItems) {
 
 /* EX 2: Building a counter function */
 
-const counter = () => {
+const initCounter = () => {
   let currentCount = 0; // need to incremenet (reassign) this later, use 'let'
 
   // closure here
+  return function() {
+    return (currentCount += 1);
+  };
 };
 
 

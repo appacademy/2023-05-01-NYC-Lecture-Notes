@@ -3,7 +3,7 @@ function century(array) {
     array.forEach(element => {
         centuryArray.push(element * 100); 
     });
-    return centuryArray;
+   return centuryArray;
 }
 
 // console.log(century([1, 2, 3, 4, 5]));
@@ -67,3 +67,11 @@ function truthyFalsey(value) {
 // }
 
 // setInterval(sayHi, 1000)
+
+
+// 0 == false
+// '0' == false
+// 1 == '1'
+// [] == 0
+// null == undefined
+// "[object Object]" == {}
