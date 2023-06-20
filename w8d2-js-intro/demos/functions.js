@@ -110,6 +110,6 @@ User.prototype.sayHello2 = function() {
   console.log(`Hello v2 ${this.username}`);
 };
 
-for (let i = 0; i++; length) {
+for (let i = 0; i < someLength; i++) {
   
 }
