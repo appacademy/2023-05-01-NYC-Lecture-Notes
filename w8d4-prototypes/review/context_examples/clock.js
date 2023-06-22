@@ -13,7 +13,18 @@ class Clock {
 
     // 4. Schedule the tick at 1 second intervals.
     console.log(this);
+
     setInterval(this._tick.bind(this), 1000);
+
+    setInterval(() => {
+      this._tick();
+    }, 1000);
+
+    const clockInstance = this;
+    setInterval(function() {
+      clockInstance._tick();
+    }, 1000);
+    setInterval(clockInstance._tick, 1000);
   }
 
   printTime() {

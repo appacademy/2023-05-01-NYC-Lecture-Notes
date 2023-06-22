@@ -18,6 +18,8 @@ Inheritance implementation 1
     - whenever we edit the Cat prototype, we also mutate the Animal prototype b/c they are the same object (not what we want) 
 */
 
+Cat.prototype = Animal.prototype;
+
 
 
 
@@ -31,8 +33,12 @@ Inheritance implementation 2
         - Animal's constructor may have lots of code that can be expensive (or at least wasteful) to run just to set a subclass' prototype
 */
 
+Cat.prototype = new Animal();
 
-
+// Inheritance implementation 2.1
+// bad performance
+// Cat.prototype.__proto__ = Animal.prototype;
+// Object.setPrototypeOf(Cat.prototype, Animal.prototype);
 
 /* --------------------------
 Inheritance implementation 3
@@ -41,13 +47,35 @@ Inheritance implementation 3
     - hence the cost of running it to define another class' prototype is minimal
 */
 
+function Surrogate() {}
+Surrogate.prototype = Animal.prototype;
+Cat.prototype = new Surrogate();
+Cat.prototype.constructor = Cat;
 
+
+
+// Function.prototype.inherit = function(Parent) {
+//   function Surrogate() {}
+//   Surrogate.prototype = Parent.prototype;
+//   this.prototype = new Surrogate();
+//   this.prototype.constructor = this;
+// };
+
+// function inherit(Child, Parent) {
+//   function Surrogate() {}
+//   Surrogate.prototype = Parent.prototype;
+//   Child.prototype = new Surrogate();
+//   Child.prototype.constructor = Child;
+// }
 
 
 
 /* --------------------------
 Inheritance implementation 4
 */
+
+Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
 
 
 
@@ -87,23 +115,32 @@ const garfield = new Cat('Garfield');
 
 /* ----- ES6 Class syntax ----- */
 
-// class Animal {
-//     constructor(name) {
-//         this.name = name;
-//     }
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
 
-//     eat() {
-//         console.log(this.name + ' is eating.');
-//     }
-// }
+    eat() {
+        console.log(this.name + ' is eating.');
+    }
+}
 
-// class Cat extends Animal {
-//     constructor(name, coatColor) {
-//         super(name); // equivalent of Animal.call(this) in ES5
-//         this.coatColor = coatColor;
-//     }
+class Cat extends Animal {
+    constructor(name, coatColor) {
+        super(name); // equivalent of Animal.call(this) in ES5
+        this.coatColor = coatColor;
+    }
 
-//     meow() {
-//         console.log('Meow!');
-//     }
-// }
+    eat() {
+      super.eat();
+      console.log("chop chop chop");
+    }
+
+    meow() {
+        console.log('Meow!');
+    }
+    
+    static classMethod() {
+      console.log("I'm a class method");
+    }
+}
