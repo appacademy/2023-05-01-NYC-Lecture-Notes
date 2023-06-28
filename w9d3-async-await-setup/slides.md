@@ -1,4 +1,4 @@
-## W9D5 - JavaScript Project Technical Info
+## W9D3 - JavaScript Project Technical Info
 
 ---
 
