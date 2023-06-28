@@ -7,14 +7,25 @@ function resolveAfter5Seconds() {
     // In our JS Projects, we would typically be returning the data from an API response
     // More on that to come soon!
     
-    return new Promise(resolve => {
+    // return new Promise((resolve, reject) => {
+    //     console.log("starting slow promise")
+
+    //     setTimeout(function () {
+    //         resolve("slow")
+    //         console.log("slow promise is done")
+    //     }, 5000)
+    // });
+
+    function excutor(resolve, reject) {
         console.log("starting slow promise")
 
         setTimeout(function () {
             resolve("slow")
             console.log("slow promise is done")
         }, 5000)
-    })
+    };
+
+    return new Promise(excutor);
 }
 
 function resolveAfter1Second() {
@@ -25,7 +36,7 @@ function resolveAfter1Second() {
         setTimeout(function () {
             resolve("fast")
             console.log("fast promise is done")
-        }, 1000)
+        }, 0)
     })
 }
 
@@ -33,7 +44,7 @@ function resolveAfter1Second() {
 function normalBehavior() {
     console.log("==NORMAL BEHAVIOR START==")
     
-    resolveAfter5Seconds()
+    resolveAfter5Seconds().then(successArg => console.log(successArg));
 
     console.log("After Slow")
 
@@ -60,6 +71,6 @@ async function sequentialStart() {
     console.log("Resolution", resolution)
 
     console.log("After Fast") // This line will only execute about 3 seconds after we invoke sequentialStart
-
+    return resolution;
 }
 

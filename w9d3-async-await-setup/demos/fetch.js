@@ -10,7 +10,8 @@ async function getData(url = 'https://jsonplaceholder.typicode.com/users') {
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    const data = await response.json() 
+    const data = await response.json();
+
     // response.json() parses JSON response into native JavaScript objects
     // response.json() is asynchronous
     return data
@@ -24,5 +25,4 @@ getData()
     .catch(error => {
         // If our fetch was unnsuccessful, here we can handle our error(s)
         console.error('There has been a problem with your fetch operation: ', error);
-    }
-);
+    });
