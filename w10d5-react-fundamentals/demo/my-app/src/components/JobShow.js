@@ -7,9 +7,11 @@ function Test() {
 }
 
 function JobShow() {
-  const params = useParams();
-  const jobId = params.jobId;
+  // const params = useParams();
+  // const jobId = params.jobId;
+  const { jobId } = useParams();
   const job = jobData[jobId];
+  
   // debugger;
 
 
