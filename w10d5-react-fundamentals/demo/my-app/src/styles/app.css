@@ -1,0 +1,19 @@
+.app {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.job-index {
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.job-index-item {
+  border: 1px solid green;
+  margin: 10px 0;
+}
+
+.job-show {
+  padding: 10px;
+  border: 1px solid purple;
+}
