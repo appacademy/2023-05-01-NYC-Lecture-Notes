@@ -41,7 +41,7 @@
 
 ## Flux Pattern
 
-![flux pattern](https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-with-client-action-1300w.png)
+![flux pattern](https://github.com/appacademy/2023-05-01-NYC-Lecture-Notes/blob/main/w11d3-react-redux/assets/flux_pattern.png?raw=true)
 
 + Flux is an architectural pattern proposed by Facebook for building SPAs. It suggests to split the application into the following parts:
   + Stores
