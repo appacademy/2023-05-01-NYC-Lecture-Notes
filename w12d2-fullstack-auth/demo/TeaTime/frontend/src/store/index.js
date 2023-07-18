@@ -2,8 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import teaReducer from './teaReducer';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-// import teaReducer from './teaReducer';
-
+import userReducer from './userReducer';
 
 // const dummyReducer = (state = {}, action) => state;
 // const rootReducer = combineReducers({
@@ -12,7 +11,8 @@ import logger from 'redux-logger';
 
 const rootReducer = (state = {}, action) => {
   return {
-    teas: teaReducer(state.teas, action)
+    teas: teaReducer(state.teas, action),
+    users: userReducer(state.users, action)
   };
 };
 
