@@ -5,9 +5,16 @@ import logger from 'redux-logger';
 import userReducer from './userReducer';
 
 // const dummyReducer = (state = {}, action) => state;
+// const entitiesReducer = combineReducers({
+//   teas: teaReducer,
+//   users: userReducer
+// })
 // const rootReducer = combineReducers({
-//   teas: teaReducer
+//   entities: entitiesReducer,
+//   session: sessionReducer,
+//   ui: uiReducer
 // });
+
 
 const rootReducer = (state = {}, action) => {
   return {

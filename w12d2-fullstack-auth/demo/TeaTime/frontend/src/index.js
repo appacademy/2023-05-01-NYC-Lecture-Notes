@@ -10,16 +10,15 @@ import { restoreSession } from './store/csrf';
 import { loginUser, logoutUser, createUser } from './store/userReducer';
 
 
-const store = configureStore({
-  teas: {
-    1: {id: 1, flavor: 'green', price: 5}
-  }
-});
+// const store = configureStore({
+//   teas: {
+//     1: {id: 1, flavor: 'green', price: 5}
+//   }
+// });
 
 // only for testing purposes
 
 window.fetchAllTeas = fetchAllTeas;
-window.store = store;
 window.receiveTea = receiveTea;
 window.receiveTeas = receiveTeas;
 window.removeTea = removeTea;
@@ -32,6 +31,23 @@ window.createUser = createUser;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 function initializeApp() {
+  const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+  let initialState = {};
+
+  if (currentUser) {
+    initialState = {
+      users: {
+        [currentUser.id]: currentUser
+      },
+      // session: {
+      //   currentUserId: currentUser.id
+      // }
+    };
+  }
+
+  const store = configureStore(initialState);
+  window.store = store;
+
   root.render(
     <React.StrictMode>
       <Provider store={store}>
